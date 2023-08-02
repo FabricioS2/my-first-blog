@@ -9,6 +9,7 @@
     <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.titulo }}</a></h2>
     <div class="date">publicaçâo: {{ post.data_de_publicacao }} </div>
     <p> {{post.text|linebreaksbr }} </p>
+    <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
 </div>
 
 {% endfor %}
